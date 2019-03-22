@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="testData" class="org.jiuwo.ratel.contract.TestData">
+        <property name="testDataList">
+            <list>
+                <ref bean="test_detail"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="test_detail" class="org.jiuwo.ratel.contract.ApiDetail">
+        <property name="apiName">
+            <value>我是测试接口请自行替换</value>
+        </property>
+        <property name="method" value="0"/>
+        <property name="apiUrl"
+                  value="http://127.0.0.1"/>
+        <property name="condition" value="returncode==0"/>
+        <property name="apiParams" value=""/>
+    </bean>
+
+</beans>
